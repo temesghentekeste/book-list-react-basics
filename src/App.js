@@ -1,8 +1,11 @@
 import React from 'react';
 
+// CSS
+import './app.css';
+
 function App() {
   return (
-    <section>
+    <section className="bookList">
       <Book/>
       <Book/>
       <Book/>
@@ -15,7 +18,7 @@ function App() {
 
 const Book = () => {
   return (
-      <article>
+      <article className='book'>
         <Image/>
         <Title/>
         <Author/>
@@ -28,6 +31,6 @@ const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/8
 const Title = () => <h1>Cracking the Tech Career: Insider Advice on Landing a Job at Google, Microsoft, Apple, or any Top Tech Company 
 </h1>
 
-const Author = () => <p>Gayle Laakmann McDowell</p>
+const Author = () => <h4 style={{color: '#617d98', fontSize: '0.98rem', marginTop:'0.5rem'}}>Gayle Laakmann McDowell</h4>
 
 export default App;
