@@ -57,13 +57,13 @@ const books = [
 function App() {
   return (
     <section className="bookList">
-     {books.map(book => <Book key={book.id} book={book}/>)}
+     {books.map(book => <Book key={book.id} {...book}/>)}
     </section>
   );
 }
 
 const Book = (props) => {
-  const {img, title, author} = props.book;
+  const {img, title, author} = props;
   return (
       <article className='book'>
         <img src={img} alt=""/>
